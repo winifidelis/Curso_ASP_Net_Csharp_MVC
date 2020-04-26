@@ -1,0 +1,65 @@
+﻿<!-- EU SÓ POSSO PASSAR UM MODELO POR VIEW, PARA PASSAR MAIS MODELOS DEVE SER ENVIADO PELO CONTROLADOR-->
+@model IntroducaoCorreto.Models.Pessoa
+
+
+    @{
+        ViewBag.Title = "Index";
+    }
+
+    <h2>Curso ASP MVC</h2>
+    <p>Curso que o Winicius vai saber tudo!</p>
+
+
+    <br />
+    <br />
+    <br />
+
+    <p>@ViewData["PessoaId"]</p>
+    <p>@ViewData["Nome"]</p>
+    <p>@ViewData["Tipo"]</p>
+
+    <br />
+    <br />
+    <br />
+    <p>@ViewBag.Id</p>
+    <p>@ViewBag.Nome</p>
+    <p>@ViewBag.Tipo</p>
+
+    <br />
+    <br />
+    <br />
+    <p>@Model.Nome</p>
+    <p>@Model.PessoaID</p>
+    <p>@Model.Tipo</p>
+
+    <br />
+    <br />
+    <br />
+    @using (Html.BeginForm("Lista", "Home", FormMethod.Post))
+    {
+        <fieldset>
+            <legend>
+                Informações de pessoas
+            </legend>
+
+            <div>
+                @Html.LabelFor(x => x.PessoaID)
+            </div>
+            <div>
+                @Html.EditorFor(x => x.PessoaID)
+            </div>
+            <div>
+                @Html.LabelFor(x => x.Nome)
+            </div>
+            <div>
+                @Html.EditorFor(x => x.Nome)
+            </div>
+            <div>
+                @Html.LabelFor(x => x.Tipo)
+            </div>
+            <div>
+                @Html.EditorFor(x => x.Tipo)
+            </div>
+            <p><input type="submit" value="Enviar" /></p>
+        </fieldset>
+    }

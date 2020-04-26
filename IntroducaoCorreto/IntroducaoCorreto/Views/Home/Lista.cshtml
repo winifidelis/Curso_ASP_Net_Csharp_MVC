@@ -1,0 +1,29 @@
+﻿@model IntroducaoCorreto.Models.Pessoa
+
+@{
+    ViewBag.Title = "Lista";
+}
+
+<h2>Lista</h2>
+
+<div>
+    <b>@Html.LabelFor(x=>x.PessoaID)</b>
+</div>
+<div>
+    @Model.PessoaID
+</div>
+<div>
+    <b>@Html.LabelFor(x => x.Nome)</b>
+</div>
+<div>
+    @Model.Nome
+</div>
+<div>
+    <b>@Html.LabelFor(x => x.Tipo)</b>
+</div>
+<div>
+    @Model.Tipo
+</div>
+<br />
+@Html.ActionLink("Ir para index", "Index", "Home")
+<br />
