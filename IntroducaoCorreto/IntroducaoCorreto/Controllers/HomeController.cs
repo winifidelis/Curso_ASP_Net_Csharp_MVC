@@ -14,6 +14,11 @@ namespace IntroducaoCorreto.Controllers
             return View();
         }
 
+        public ActionResult Contatos()
+        {
+            return View();
+        }
+
 
     }
 }
